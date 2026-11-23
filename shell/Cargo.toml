@@ -1,0 +1,11 @@
+[package]
+name = "fmp-shell"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+fmp-interface = { path = "../interface" }
+fmp-client = { path = "../client" }
+tokio = { version = "1.54.1", features = ["sync", "rt-multi-thread", "time"] }
+anyhow = "1.0.105"
+clap = { version = "4.6.9", features = ["derive"] }

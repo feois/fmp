@@ -1,0 +1,17 @@
+[package]
+name = "fmp-server"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+fmp-interface = { path = "../interface" }
+fipc = { git = "https://github.com/feois/fipc.git" }
+tokio = { version = "1.54.1", features = ["sync", "rt-multi-thread"] }
+log = "0.4.28"
+env_logger = { version = "0.11.8", optional = true }
+thiserror = "2.0.21"
+rodio = { version = "0.23.0", features = ["playback"] }
+
+[features]
+default = ["env_logger"]
+env_logger = ["dep:env_logger"]
